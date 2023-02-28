@@ -1,5 +1,5 @@
 const form = document.querySelector("form")
-const email = document.querySelector("input[type='email']");
+const email = document.querySelector("input[type='text']");
 const error = document.querySelector("#email-error")
 //See if input matches regEx for emails
 const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g

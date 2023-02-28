@@ -58,7 +58,7 @@ form {
     grid-template-columns: repeat(10,1fr);
     grid-template-rows: repeat(2, 1fr);
 
-    input[type="email"]{
+    input[type="text"]{
         border: 1px solid $secondary-pale-blue;
         border-radius: 2rem;
         grid-column: 2 / 10;
