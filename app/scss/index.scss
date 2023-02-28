@@ -1,0 +1,122 @@
+//variables + functions
+@import 'variables';
+
+// base & layout
+@import 'base';
+
+// colors 
+
+// components (button, card, navbar)
+
+// utilities (margin, padding, opacity)
+
+
+
+
+
+body {
+    font-family: $primary-font, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 1rem;
+    text-decoration: none;
+    min-height: 120vh;
+    width: auto;
+    row-gap: 1rem;
+
+    img {
+        margin-bottom: 1.5rem;
+    }
+}
+
+main {
+    display: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin: 0;
+        color: $neutral-gray;
+        span {
+            font-weight: 700;
+            color: $neutral-very-dark-blue;
+        }
+    }
+}
+
+form {
+    width: 100%;
+    display: grid;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    input[type="email"]{
+        border: 1px solid $secondary-pale-blue;
+        border-radius: 2rem;
+        grid-column: 2 / 10;
+        grid-row: 1 / 2;
+        padding: 0.75rem 1.5rem;
+    }
+
+    input[type="email"]::placeholder {
+        color: $secondary-pale-blue;
+    }
+
+    input[type="submit"]{
+        border: none;
+        border-radius: 2rem;
+        grid-column: 2/10;
+        grid-row: 2 / 3;
+        padding: 0.25rem 1.5rem;
+        background-color: $primary-blue;
+        font-family: $primary-font;
+        color: white;
+        font-weight: 500;
+    }
+}
+
+div.dashboard {
+    margin: 3rem 0 6rem 0;
+    img {
+    width: 100%;
+    height: auto;
+    }
+}
+
+div.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    column-gap: 0.75rem;
+    margin: 1rem;
+
+    svg {
+        color: $primary-blue;
+        border-radius: 50%;
+        border: 1px solid $secondary-pale-blue;
+        padding: 0.5rem;
+    }
+
+    .svg-inline--fa {
+        width: 1em;
+    }
+
+
+}
+
+footer {
+    span {
+        color: $neutral-gray;
+        font-size: 0.8rem;
+    }
+}
