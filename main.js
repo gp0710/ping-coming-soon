@@ -6,13 +6,11 @@ const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
 
 form.addEventListener("submit", (e) => {
     const message = [];
-    if( email.value == "" || email.value == "null" || email.value !== regEx) {
-        messages.push("Please provide a valid email address");
-        console.log(messages)
-    }
-    if( messages.length > 0) {
+    if( email.value == "" || email.value == "null" || regEx.test(email.value) == false) {
+        message.push("Please provide a valid email address");
+    } if( message.length > 0) {
         e.preventDefault();
-        error.innerText = messages.join(', ')
-    
+        error.innerText = message.join(', ')
+        email.classList.add("red");
     }
 })
